@@ -62,6 +62,7 @@ class ArrayReversorTest {
         when(arrayFlattener.flatten(input)).thenReturn(flattenOutput);
 
         assertEquals(arrayReversor.reverseArray(input), output);
+        verify(arrayFlattener, times(1)).flatten(anyList());
     }
 
     @Test
